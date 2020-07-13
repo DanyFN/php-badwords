@@ -4,10 +4,16 @@ sostituire la badword passata in GET con tre *.  -->
 
 <?php
 
-  $paragrafo = "ciao sono un paragrafo!";
+  $paragrafo = "Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla lorem pariatur.
+   lorem sint occaecat lorem non proident, sunt in culpa qui lorem";
+
   $lenghtp = strlen($paragrafo);  // strlen è la funzione che restituisce la lunghezza della stringa
   $ban = $_GET["ban"];
-  $paragrafocorretto = str_replace($ban, "xxx", $paragrafo); // replace
+  $paragrafocorretto = str_replace($ban, "***", $paragrafo);
 
 ?>
 
@@ -18,6 +24,7 @@ sostituire la badword passata in GET con tre *.  -->
     <title></title>
   </head>
   <body>
-    <p><?php echo $paragrafocorretto . " la lunghezza è di: " . $lenghtp . " parole"?></p>
+    <p><?php echo $paragrafocorretto?></p>
+    <p><?php echo " la lunghezza è di: " . $lenghtp . " parole"?></p>
   </body>
 </html>
